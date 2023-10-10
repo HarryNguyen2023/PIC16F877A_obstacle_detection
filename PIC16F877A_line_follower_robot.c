@@ -12,7 +12,6 @@
 float obs_distance = 0;
 char distance_command = 'a';
 uint8_t count = 0;
-char tx_buffer[15];
 
 // Function to handle the interrupt
 void __interrupt() ISR(void)
@@ -21,7 +20,7 @@ void __interrupt() ISR(void)
     if(TMR0IF)
     {
         TMR0 = 6;
-        if(count++ == 20)
+        if(++count == 50)
         {
             count = 0;
             hcsr04Trigger();
@@ -35,9 +34,9 @@ void __interrupt() ISR(void)
         {
             obs_distance = getDistance();
             // Divide the case of the distance
-            if(obs_distance > 100)
+            if(obs_distance > 70)
                 distance_command = 'a';
-            else if(obs_distance < 50)
+            else if(obs_distance < 30)
                 distance_command = 'c';
             else 
                 distance_command = 'b';
@@ -45,52 +44,53 @@ void __interrupt() ISR(void)
         CCP1IF = 0;
     }
     // I2C communication 
-    if(SSPIF)
-    {
-        // Error handling
-        if(WCOL || SSPOV)
-        {
-            // Read the data
-            char dummy = SSPBUF;
-            // Clear the error flag bits
-            WCOL = 0;
-            SSPOV = 0;
-            // Release the clock line
-            SSPCONbits.CKP = 1;
-        }
-        // Case of slave transmitter required
-        if(R_nW)
-        {
-            // Read the data
-            char dummy = SSPBUF;
-            // Transmit the right data
-            SSPBUF = distance_command;
-            // Release the clock line
-            SSPCONbits.CKP = 1;
-            // Wait for transmit to be completed
-            while(SSPSTATbits.BF);
-        }
-        SSPIF = 0;
-    }
+//    if(SSPIF)
+//    {
+//        // Error handling
+//        if(WCOL || SSPOV)
+//        {
+//            // Read the data
+//            char dummy = SSPBUF;
+//            // Clear the error flag bits
+//            WCOL = 0;
+//            SSPOV = 0;
+//            // Release the clock line
+//            SSPCONbits.CKP = 1;
+//        }
+//        // Case of slave transmitter required
+//        if(R_nW)
+//        {
+//            // Read the data
+//            char dummy = SSPBUF;
+//            // Transmit the right data
+//            SSPBUF = distance_command;
+//            // Release the clock line
+//            SSPCONbits.CKP = 1;
+//            // Wait for transmit to be completed
+//            while(SSPSTATbits.BF);
+//        }
+//        SSPIF = 0;
+//    }
 }
 
 void main(void) 
 {
     // Initiate the I2C in slave transmitter mode
-    I2C_Slave_Init(I2C_ADDRESS);
+//    I2C_Slave_Init(I2C_ADDRESS);
+    // Initiate the UART module
+    UARTTransInit();
     // Initiate the Timer 0 TIMER mode
     TMR0 = 6;
     timer0TimerInit(TIMER0_DIV_16);
     // Initiate the HCSR04 ultrasonic sensor
     hcsr04Init();
-    // Initiate the UART module
-    UARTTransInit();
+    
+    UARTsendString("Hello Gia\r\n");
     
     while(1)
     {
-//        sprintf(tx_buffer,"Dust: %.2f cm\r\n", obs_distance);
-//        UARTsendString(tx_buffer);
-//        __delay_ms(50);
+        UARTsendChar(distance_command);
+        __delay_ms(100);
     }
     return;
 }

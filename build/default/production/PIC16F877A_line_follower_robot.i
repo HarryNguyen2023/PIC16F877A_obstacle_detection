@@ -2065,7 +2065,6 @@ int UARTrcvString(char *rcv_buffer, uint16_t length);
 float obs_distance = 0;
 char distance_command = 'a';
 uint8_t count = 0;
-char tx_buffer[15];
 
 
 void __attribute__((picinterrupt(("")))) ISR(void)
@@ -2074,7 +2073,7 @@ void __attribute__((picinterrupt(("")))) ISR(void)
     if(TMR0IF)
     {
         TMR0 = 6;
-        if(count++ == 20)
+        if(++count == 50)
         {
             count = 0;
             hcsr04Trigger();
@@ -2088,62 +2087,36 @@ void __attribute__((picinterrupt(("")))) ISR(void)
         {
             obs_distance = getDistance();
 
-            if(obs_distance > 100)
+            if(obs_distance > 70)
                 distance_command = 'a';
-            else if(obs_distance < 50)
+            else if(obs_distance < 30)
                 distance_command = 'c';
             else
                 distance_command = 'b';
         }
         CCP1IF = 0;
     }
-
-    if(SSPIF)
-    {
-
-        if(WCOL || SSPOV)
-        {
-
-            char dummy = SSPBUF;
-
-            WCOL = 0;
-            SSPOV = 0;
-
-            SSPCONbits.CKP = 1;
-        }
-
-        if(R_nW)
-        {
-
-            char dummy = SSPBUF;
-
-            SSPBUF = distance_command;
-
-            SSPCONbits.CKP = 1;
-
-            while(SSPSTATbits.BF);
-        }
-        SSPIF = 0;
-    }
+# 74 "PIC16F877A_line_follower_robot.c"
 }
 
 void main(void)
 {
 
-    I2C_Slave_Init(0x10);
+
+
+    UARTTransInit();
 
     TMR0 = 6;
     timer0TimerInit(TIMER0_DIV_16);
 
     hcsr04Init();
 
-    UARTTransInit();
+    UARTsendString("Hello Gia\r\n");
 
     while(1)
     {
-
-
-
+        UARTsendChar(distance_command);
+        _delay((unsigned long)((100)*(16000000/4000.0)));
     }
     return;
 }
