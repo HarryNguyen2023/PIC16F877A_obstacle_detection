@@ -3,7 +3,6 @@
 #include "PIC16F877A_I2C.h"
 #include "PIC16F877A_timer0.h"
 #include "PIC16F877A_HCSR04.h"
-#include "PIC16F877A_UART.h"
 
 // Define the I2C address of this MCU
 #define I2C_ADDRESS 0x10
@@ -44,53 +43,47 @@ void __interrupt() ISR(void)
         CCP1IF = 0;
     }
     // I2C communication 
-//    if(SSPIF)
-//    {
-//        // Error handling
-//        if(WCOL || SSPOV)
-//        {
-//            // Read the data
-//            char dummy = SSPBUF;
-//            // Clear the error flag bits
-//            WCOL = 0;
-//            SSPOV = 0;
-//            // Release the clock line
-//            SSPCONbits.CKP = 1;
-//        }
-//        // Case of slave transmitter required
-//        if(R_nW)
-//        {
-//            // Read the data
-//            char dummy = SSPBUF;
-//            // Transmit the right data
-//            SSPBUF = distance_command;
-//            // Release the clock line
-//            SSPCONbits.CKP = 1;
-//            // Wait for transmit to be completed
-//            while(SSPSTATbits.BF);
-//        }
-//        SSPIF = 0;
-//    }
+    if(SSPIF)
+    {
+        // Error handling
+        if(WCOL || SSPOV)
+        {
+            // Read the data
+            char dummy = SSPBUF;
+            // Clear the error flag bits
+            WCOL = 0;
+            SSPOV = 0;
+            // Release the clock line
+            SSPCONbits.CKP = 1;
+        }
+        // Case of slave transmitter required
+        if(R_nW)
+        {
+            // Read the data
+            char dummy = SSPBUF;
+            // Transmit the right data
+            SSPBUF = distance_command;
+            // Release the clock line
+            SSPCONbits.CKP = 1;
+            // Wait for transmit to be completed
+            while(SSPSTATbits.BF);
+        }
+        SSPIF = 0;
+    }
 }
 
 void main(void) 
 {
     // Initiate the I2C in slave transmitter mode
-//    I2C_Slave_Init(I2C_ADDRESS);
-    // Initiate the UART module
-    UARTTransInit();
+    I2C_Slave_Init(I2C_ADDRESS);
     // Initiate the Timer 0 TIMER mode
     TMR0 = 6;
     timer0TimerInit(TIMER0_DIV_16);
     // Initiate the HCSR04 ultrasonic sensor
     hcsr04Init();
     
-    UARTsendString("Hello Gia\r\n");
-    
     while(1)
     {
-        UARTsendChar(distance_command);
-        __delay_ms(100);
     }
     return;
 }
