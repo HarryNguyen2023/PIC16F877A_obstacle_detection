@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=PIC16F877A_HCSR04.c PIC16F877A_line_follower_robot.c PIC16F877A_I2C.c PIC16F877A_input_capture.c PIC16F877A_timer0.c PIC16F877A_UART.c
+SOURCEFILES_QUOTED_IF_SPACED=PIC16F877A_HCSR04.c PIC16F877A_line_follower_robot.c PIC16F877A_I2C.c PIC16F877A_input_capture.c PIC16F877A_timer0.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/PIC16F877A_HCSR04.p1 ${OBJECTDIR}/PIC16F877A_line_follower_robot.p1 ${OBJECTDIR}/PIC16F877A_I2C.p1 ${OBJECTDIR}/PIC16F877A_input_capture.p1 ${OBJECTDIR}/PIC16F877A_timer0.p1 ${OBJECTDIR}/PIC16F877A_UART.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/PIC16F877A_HCSR04.p1.d ${OBJECTDIR}/PIC16F877A_line_follower_robot.p1.d ${OBJECTDIR}/PIC16F877A_I2C.p1.d ${OBJECTDIR}/PIC16F877A_input_capture.p1.d ${OBJECTDIR}/PIC16F877A_timer0.p1.d ${OBJECTDIR}/PIC16F877A_UART.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/PIC16F877A_HCSR04.p1 ${OBJECTDIR}/PIC16F877A_line_follower_robot.p1 ${OBJECTDIR}/PIC16F877A_I2C.p1 ${OBJECTDIR}/PIC16F877A_input_capture.p1 ${OBJECTDIR}/PIC16F877A_timer0.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/PIC16F877A_HCSR04.p1.d ${OBJECTDIR}/PIC16F877A_line_follower_robot.p1.d ${OBJECTDIR}/PIC16F877A_I2C.p1.d ${OBJECTDIR}/PIC16F877A_input_capture.p1.d ${OBJECTDIR}/PIC16F877A_timer0.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/PIC16F877A_HCSR04.p1 ${OBJECTDIR}/PIC16F877A_line_follower_robot.p1 ${OBJECTDIR}/PIC16F877A_I2C.p1 ${OBJECTDIR}/PIC16F877A_input_capture.p1 ${OBJECTDIR}/PIC16F877A_timer0.p1 ${OBJECTDIR}/PIC16F877A_UART.p1
+OBJECTFILES=${OBJECTDIR}/PIC16F877A_HCSR04.p1 ${OBJECTDIR}/PIC16F877A_line_follower_robot.p1 ${OBJECTDIR}/PIC16F877A_I2C.p1 ${OBJECTDIR}/PIC16F877A_input_capture.p1 ${OBJECTDIR}/PIC16F877A_timer0.p1
 
 # Source Files
-SOURCEFILES=PIC16F877A_HCSR04.c PIC16F877A_line_follower_robot.c PIC16F877A_I2C.c PIC16F877A_input_capture.c PIC16F877A_timer0.c PIC16F877A_UART.c
+SOURCEFILES=PIC16F877A_HCSR04.c PIC16F877A_line_follower_robot.c PIC16F877A_I2C.c PIC16F877A_input_capture.c PIC16F877A_timer0.c
 
 
 
@@ -128,14 +128,6 @@ ${OBJECTDIR}/PIC16F877A_timer0.p1: PIC16F877A_timer0.c  nbproject/Makefile-${CND
 	@-${MV} ${OBJECTDIR}/PIC16F877A_timer0.d ${OBJECTDIR}/PIC16F877A_timer0.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_timer0.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/PIC16F877A_UART.p1: PIC16F877A_UART.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/PIC16F877A_UART.p1.d 
-	@${RM} ${OBJECTDIR}/PIC16F877A_UART.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=none   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F877A_UART.p1 PIC16F877A_UART.c 
-	@-${MV} ${OBJECTDIR}/PIC16F877A_UART.d ${OBJECTDIR}/PIC16F877A_UART.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_UART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/PIC16F877A_HCSR04.p1: PIC16F877A_HCSR04.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -176,14 +168,6 @@ ${OBJECTDIR}/PIC16F877A_timer0.p1: PIC16F877A_timer0.c  nbproject/Makefile-${CND
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F877A_timer0.p1 PIC16F877A_timer0.c 
 	@-${MV} ${OBJECTDIR}/PIC16F877A_timer0.d ${OBJECTDIR}/PIC16F877A_timer0.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_timer0.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/PIC16F877A_UART.p1: PIC16F877A_UART.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/PIC16F877A_UART.p1.d 
-	@${RM} ${OBJECTDIR}/PIC16F877A_UART.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/PIC16F877A_UART.p1 PIC16F877A_UART.c 
-	@-${MV} ${OBJECTDIR}/PIC16F877A_UART.d ${OBJECTDIR}/PIC16F877A_UART.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/PIC16F877A_UART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

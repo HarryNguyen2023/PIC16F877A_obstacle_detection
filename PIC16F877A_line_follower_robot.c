@@ -6,6 +6,8 @@
 
 // Define the I2C address of this MCU
 #define I2C_ADDRESS 0x10
+#define TRIS_LED TRISD1
+#define LED RD1
 
 // Global variable
 float obs_distance = 0;
@@ -33,12 +35,21 @@ void __interrupt() ISR(void)
         {
             obs_distance = getDistance();
             // Divide the case of the distance
-            if(obs_distance > 70)
+            if(obs_distance > 50)
+            {
                 distance_command = 'a';
-            else if(obs_distance < 30)
+                LED = 0;
+            }
+            else if(obs_distance < 25)
+            {
                 distance_command = 'c';
+                LED = 1;
+            }
             else 
+            {
                 distance_command = 'b';
+                LED = 0;
+            }
         }
         CCP1IF = 0;
     }
@@ -74,6 +85,9 @@ void __interrupt() ISR(void)
 
 void main(void) 
 {
+    // Initiate the LED
+    TRIS_LED = 0;
+    LED = 0;
     // Initiate the I2C in slave transmitter mode
     I2C_Slave_Init(I2C_ADDRESS);
     // Initiate the Timer 0 TIMER mode
@@ -84,6 +98,8 @@ void main(void)
     
     while(1)
     {
+//        LED = ~LED;
+//        __delay_ms(1000);
     }
     return;
 }

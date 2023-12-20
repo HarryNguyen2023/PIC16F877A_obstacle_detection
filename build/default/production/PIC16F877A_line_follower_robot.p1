@@ -19,30 +19,91 @@ Version 4.0 HI-TECH Software Intermediate Code
 "9
 [; ;./PIC16F877A_HCSR04.h: 9: float getDistance(void);
 [v _getDistance `(f ~T0 @X0 0 ef ]
+"2757 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2757: extern volatile __bit RD1 __attribute__((address(0x41)));
+[v _RD1 `Vb ~T0 @X0 0 e@65 ]
+"2829
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2829: extern volatile __bit SSPIF __attribute__((address(0x63)));
+[v _SSPIF `Vb ~T0 @X0 0 e@99 ]
+"3048
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 3048: extern volatile __bit WCOL __attribute__((address(0xA7)));
+[v _WCOL `Vb ~T0 @X0 0 e@167 ]
+"2844
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2844: extern volatile __bit SSPOV __attribute__((address(0xA6)));
+[v _SSPOV `Vb ~T0 @X0 0 e@166 ]
+"809
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 809: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"822
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 822:     struct {
+[s S32 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S32 . SSPM CKP SSPEN SSPOV WCOL ]
+"829
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 829:     struct {
+[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"821
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 821: typedef union {
+[u S31 `S32 1 `S33 1 ]
+[n S31 . . . ]
+"836
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 836: extern volatile SSPCONbits_t SSPCONbits __attribute__((address(0x014)));
+[v _SSPCONbits `VS31 ~T0 @X0 0 e@20 ]
+"2808
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2808: extern volatile __bit R_nW __attribute__((address(0x4A2)));
+[v _R_nW `Vb ~T0 @X0 0 e@1186 ]
+"1837
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1837:     struct {
+[s S73 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S73 . BF UA R_nW S P D_nA CKE SMP ]
+"1847
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1847:     struct {
+[s S74 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S74 . . R . D ]
+"1853
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1853:     struct {
+[s S75 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S75 . . I2C_READ I2C_START I2C_STOP I2C_DATA ]
+"1860
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1860:     struct {
+[s S76 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S76 . . nW . nA ]
+"1866
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1866:     struct {
+[s S77 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S77 . . nWRITE . nADDRESS ]
+"1872
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1872:     struct {
+[s S78 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S78 . . R_W . D_A ]
+"1878
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1878:     struct {
+[s S79 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S79 . . READ_WRITE . DATA_ADDRESS ]
+"1836
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1836: typedef union {
+[u S72 `S73 1 `S74 1 `S75 1 `S76 1 `S77 1 `S78 1 `S79 1 ]
+[n S72 . . . . . . . . ]
+"1885
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 1885: extern volatile SSPSTATbits_t SSPSTATbits __attribute__((address(0x094)));
+[v _SSPSTATbits `VS72 ~T0 @X0 0 e@148 ]
 [p mainexit ]
-"11 ./PIC16F877A_UART.h
-[; ;./PIC16F877A_UART.h: 11: void UARTTransInit(void);
-[v _UARTTransInit `(v ~T0 @X0 0 ef ]
+"2991
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2991: extern volatile __bit TRISD1 __attribute__((address(0x441)));
+[v _TRISD1 `Vb ~T0 @X0 0 e@1089 ]
+"13 ./PIC16F877A_I2C.h
+[; ;./PIC16F877A_I2C.h: 13: void I2C_Slave_Init(uint8_t slave_address);
+[v _I2C_Slave_Init `(v ~T0 @X0 0 ef1`uc ]
 "27 ./PIC16F877A_timer0.h
 [; ;./PIC16F877A_timer0.h: 27: void timer0TimerInit(uint16_t prescaler);
 [v _timer0TimerInit `(v ~T0 @X0 0 ef1`ui ]
-"84 PIC16F877A_line_follower_robot.c
-[; ;PIC16F877A_line_follower_robot.c: 84:     timer0TimerInit(TIMER0_DIV_16);
+"95 PIC16F877A_line_follower_robot.c
+[; ;PIC16F877A_line_follower_robot.c: 95:     timer0TimerInit(TIMER0_DIV_16);
 [c E949 1 2 4 8 16 32 64 128 256 .. ]
 [n E949 pre_scaler TIMER0_DIV_1 TIMER0_DIV_2 TIMER0_DIV_4 TIMER0_DIV_8 TIMER0_DIV_16 TIMER0_DIV_32 TIMER0_DIV_64 TIMER0_DIV_128 TIMER0_DIV_256  ]
 "6 ./PIC16F877A_HCSR04.h
 [; ;./PIC16F877A_HCSR04.h: 6: void hcsr04Init(void);
 [v _hcsr04Init `(v ~T0 @X0 0 ef ]
-"15 ./PIC16F877A_UART.h
-[; ;./PIC16F877A_UART.h: 15: void UARTsendString(char *str);
-[v _UARTsendString `(v ~T0 @X0 0 ef1`*uc ]
-"14
-[; ;./PIC16F877A_UART.h: 14: void UARTsendChar(char c);
-[v _UARTsendChar `(v ~T0 @X0 0 ef1`uc ]
-[v F36 `(v ~T0 @X0 1 tf1`ul ]
-"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\builtins.h
-[v __delay `JF36 ~T0 @X0 0 e ]
-[p i __delay ]
 "5 ./config.h
 [p x FOSC  =  HS         ]
 "6
@@ -239,171 +300,251 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2364
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\pic\include\proc\pic16f877a.h: 2364: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"9 ./PIC16F877A_UART.h
-[; ;./PIC16F877A_UART.h: 9: static uint16_t uart_str_idx = 0;
-[v _uart_str_idx `ui ~T0 @X0 1 s ]
-[i _uart_str_idx
--> -> 0 `i `ui
-]
-"12 PIC16F877A_line_follower_robot.c
-[; ;PIC16F877A_line_follower_robot.c: 12: float obs_distance = 0;
+"13 PIC16F877A_line_follower_robot.c
+[; ;PIC16F877A_line_follower_robot.c: 13: float obs_distance = 0;
 [v _obs_distance `f ~T0 @X0 1 e ]
 [i _obs_distance
 -> -> 0 `i `f
 ]
-"13
-[; ;PIC16F877A_line_follower_robot.c: 13: char distance_command = 'a';
+"14
+[; ;PIC16F877A_line_follower_robot.c: 14: char distance_command = 'a';
 [v _distance_command `uc ~T0 @X0 1 e ]
 [i _distance_command
 -> -> 97 `ui `uc
 ]
-"14
-[; ;PIC16F877A_line_follower_robot.c: 14: uint8_t count = 0;
+"15
+[; ;PIC16F877A_line_follower_robot.c: 15: uint8_t count = 0;
 [v _count `uc ~T0 @X0 1 e ]
 [i _count
 -> -> 0 `i `uc
 ]
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"17
-[; ;PIC16F877A_line_follower_robot.c: 17: void __attribute__((picinterrupt(("")))) ISR(void)
-[v _ISR `(v ~T1 @X0 1 ef ]
 "18
-[; ;PIC16F877A_line_follower_robot.c: 18: {
+[; ;PIC16F877A_line_follower_robot.c: 18: void __attribute__((picinterrupt(("")))) ISR(void)
+[v _ISR `(v ~T1 @X0 1 ef ]
+"19
+[; ;PIC16F877A_line_follower_robot.c: 19: {
 {
 [e :U _ISR ]
 [f ]
-"20
-[; ;PIC16F877A_line_follower_robot.c: 20:     if(TMR0IF)
-[e $ ! _TMR0IF 97  ]
 "21
-[; ;PIC16F877A_line_follower_robot.c: 21:     {
-{
+[; ;PIC16F877A_line_follower_robot.c: 21:     if(TMR0IF)
+[e $ ! _TMR0IF 97  ]
 "22
-[; ;PIC16F877A_line_follower_robot.c: 22:         TMR0 = 6;
-[e = _TMR0 -> -> 6 `i `uc ]
-"23
-[; ;PIC16F877A_line_follower_robot.c: 23:         if(++count == 50)
-[e $ ! == -> =+ _count -> -> 1 `i `uc `i -> 50 `i 98  ]
-"24
-[; ;PIC16F877A_line_follower_robot.c: 24:         {
+[; ;PIC16F877A_line_follower_robot.c: 22:     {
 {
+"23
+[; ;PIC16F877A_line_follower_robot.c: 23:         TMR0 = 6;
+[e = _TMR0 -> -> 6 `i `uc ]
+"24
+[; ;PIC16F877A_line_follower_robot.c: 24:         if(++count == 50)
+[e $ ! == -> =+ _count -> -> 1 `i `uc `i -> 50 `i 98  ]
 "25
-[; ;PIC16F877A_line_follower_robot.c: 25:             count = 0;
-[e = _count -> -> 0 `i `uc ]
+[; ;PIC16F877A_line_follower_robot.c: 25:         {
+{
 "26
-[; ;PIC16F877A_line_follower_robot.c: 26:             hcsr04Trigger();
-[e ( _hcsr04Trigger ..  ]
+[; ;PIC16F877A_line_follower_robot.c: 26:             count = 0;
+[e = _count -> -> 0 `i `uc ]
 "27
-[; ;PIC16F877A_line_follower_robot.c: 27:         }
+[; ;PIC16F877A_line_follower_robot.c: 27:             hcsr04Trigger();
+[e ( _hcsr04Trigger ..  ]
+"28
+[; ;PIC16F877A_line_follower_robot.c: 28:         }
 }
 [e :U 98 ]
-"28
-[; ;PIC16F877A_line_follower_robot.c: 28:         TMR0IF = 0;
-[e = _TMR0IF -> -> 0 `i `b ]
 "29
-[; ;PIC16F877A_line_follower_robot.c: 29:     }
+[; ;PIC16F877A_line_follower_robot.c: 29:         TMR0IF = 0;
+[e = _TMR0IF -> -> 0 `i `b ]
+"30
+[; ;PIC16F877A_line_follower_robot.c: 30:     }
 }
 [e :U 97 ]
-"31
-[; ;PIC16F877A_line_follower_robot.c: 31:     if(CCP1IF)
-[e $ ! _CCP1IF 99  ]
 "32
-[; ;PIC16F877A_line_follower_robot.c: 32:     {
-{
+[; ;PIC16F877A_line_follower_robot.c: 32:     if(CCP1IF)
+[e $ ! _CCP1IF 99  ]
 "33
-[; ;PIC16F877A_line_follower_robot.c: 33:         if(hcsr04Distance())
-[e $ ! != -> ( _hcsr04Distance ..  `i -> 0 `i 100  ]
-"34
-[; ;PIC16F877A_line_follower_robot.c: 34:         {
+[; ;PIC16F877A_line_follower_robot.c: 33:     {
 {
+"34
+[; ;PIC16F877A_line_follower_robot.c: 34:         if(hcsr04Distance())
+[e $ ! != -> ( _hcsr04Distance ..  `i -> 0 `i 100  ]
 "35
-[; ;PIC16F877A_line_follower_robot.c: 35:             obs_distance = getDistance();
+[; ;PIC16F877A_line_follower_robot.c: 35:         {
+{
+"36
+[; ;PIC16F877A_line_follower_robot.c: 36:             obs_distance = getDistance();
 [e = _obs_distance ( _getDistance ..  ]
-"37
-[; ;PIC16F877A_line_follower_robot.c: 37:             if(obs_distance > 70)
-[e $ ! > _obs_distance -> -> 70 `i `f 101  ]
 "38
-[; ;PIC16F877A_line_follower_robot.c: 38:                 distance_command = 'a';
-[e = _distance_command -> -> 97 `ui `uc ]
-[e $U 102  ]
+[; ;PIC16F877A_line_follower_robot.c: 38:             if(obs_distance > 50)
+[e $ ! > _obs_distance -> -> 50 `i `f 101  ]
 "39
-[; ;PIC16F877A_line_follower_robot.c: 39:             else if(obs_distance < 30)
-[e :U 101 ]
-[e $ ! < _obs_distance -> -> 30 `i `f 103  ]
+[; ;PIC16F877A_line_follower_robot.c: 39:             {
+{
 "40
-[; ;PIC16F877A_line_follower_robot.c: 40:                 distance_command = 'c';
-[e = _distance_command -> -> 99 `ui `uc ]
-[e $U 104  ]
+[; ;PIC16F877A_line_follower_robot.c: 40:                 distance_command = 'a';
+[e = _distance_command -> -> 97 `ui `uc ]
 "41
-[; ;PIC16F877A_line_follower_robot.c: 41:             else
-[e :U 103 ]
+[; ;PIC16F877A_line_follower_robot.c: 41:                 RD1 = 0;
+[e = _RD1 -> -> 0 `i `b ]
 "42
-[; ;PIC16F877A_line_follower_robot.c: 42:                 distance_command = 'b';
+[; ;PIC16F877A_line_follower_robot.c: 42:             }
+}
+[e $U 102  ]
+"43
+[; ;PIC16F877A_line_follower_robot.c: 43:             else if(obs_distance < 25)
+[e :U 101 ]
+[e $ ! < _obs_distance -> -> 25 `i `f 103  ]
+"44
+[; ;PIC16F877A_line_follower_robot.c: 44:             {
+{
+"45
+[; ;PIC16F877A_line_follower_robot.c: 45:                 distance_command = 'c';
+[e = _distance_command -> -> 99 `ui `uc ]
+"46
+[; ;PIC16F877A_line_follower_robot.c: 46:                 RD1 = 1;
+[e = _RD1 -> -> 1 `i `b ]
+"47
+[; ;PIC16F877A_line_follower_robot.c: 47:             }
+}
+[e $U 104  ]
+"48
+[; ;PIC16F877A_line_follower_robot.c: 48:             else
+[e :U 103 ]
+"49
+[; ;PIC16F877A_line_follower_robot.c: 49:             {
+{
+"50
+[; ;PIC16F877A_line_follower_robot.c: 50:                 distance_command = 'b';
 [e = _distance_command -> -> 98 `ui `uc ]
+"51
+[; ;PIC16F877A_line_follower_robot.c: 51:                 RD1 = 0;
+[e = _RD1 -> -> 0 `i `b ]
+"52
+[; ;PIC16F877A_line_follower_robot.c: 52:             }
+}
 [e :U 104 ]
 [e :U 102 ]
-"43
-[; ;PIC16F877A_line_follower_robot.c: 43:         }
+"53
+[; ;PIC16F877A_line_follower_robot.c: 53:         }
 }
 [e :U 100 ]
-"44
-[; ;PIC16F877A_line_follower_robot.c: 44:         CCP1IF = 0;
+"54
+[; ;PIC16F877A_line_follower_robot.c: 54:         CCP1IF = 0;
 [e = _CCP1IF -> -> 0 `i `b ]
-"45
-[; ;PIC16F877A_line_follower_robot.c: 45:     }
+"55
+[; ;PIC16F877A_line_follower_robot.c: 55:     }
 }
 [e :U 99 ]
+"57
+[; ;PIC16F877A_line_follower_robot.c: 57:     if(SSPIF)
+[e $ ! _SSPIF 105  ]
+"58
+[; ;PIC16F877A_line_follower_robot.c: 58:     {
+{
+"60
+[; ;PIC16F877A_line_follower_robot.c: 60:         if(WCOL || SSPOV)
+[e $ ! || _WCOL _SSPOV 106  ]
+"61
+[; ;PIC16F877A_line_follower_robot.c: 61:         {
+{
+"63
+[; ;PIC16F877A_line_follower_robot.c: 63:             char dummy = SSPBUF;
+[v _dummy `uc ~T0 @X0 1 a ]
+[e = _dummy -> _SSPBUF `uc ]
+"65
+[; ;PIC16F877A_line_follower_robot.c: 65:             WCOL = 0;
+[e = _WCOL -> -> 0 `i `b ]
+"66
+[; ;PIC16F877A_line_follower_robot.c: 66:             SSPOV = 0;
+[e = _SSPOV -> -> 0 `i `b ]
+"68
+[; ;PIC16F877A_line_follower_robot.c: 68:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"69
+[; ;PIC16F877A_line_follower_robot.c: 69:         }
+}
+[e :U 106 ]
+"71
+[; ;PIC16F877A_line_follower_robot.c: 71:         if(R_nW)
+[e $ ! _R_nW 107  ]
+"72
+[; ;PIC16F877A_line_follower_robot.c: 72:         {
+{
 "74
-[; ;PIC16F877A_line_follower_robot.c: 74: }
+[; ;PIC16F877A_line_follower_robot.c: 74:             char dummy = SSPBUF;
+[v _dummy `uc ~T0 @X0 1 a ]
+[e = _dummy -> _SSPBUF `uc ]
+"76
+[; ;PIC16F877A_line_follower_robot.c: 76:             SSPBUF = distance_command;
+[e = _SSPBUF -> _distance_command `uc ]
+"78
+[; ;PIC16F877A_line_follower_robot.c: 78:             SSPCONbits.CKP = 1;
+[e = . . _SSPCONbits 0 1 -> -> 1 `i `uc ]
+"80
+[; ;PIC16F877A_line_follower_robot.c: 80:             while(SSPSTATbits.BF);
+[e $U 108  ]
+[e :U 109 ]
+[e :U 108 ]
+[e $ != -> . . _SSPSTATbits 0 0 `i -> 0 `i 109  ]
+[e :U 110 ]
+"81
+[; ;PIC16F877A_line_follower_robot.c: 81:         }
+}
+[e :U 107 ]
+"82
+[; ;PIC16F877A_line_follower_robot.c: 82:         SSPIF = 0;
+[e = _SSPIF -> -> 0 `i `b ]
+"83
+[; ;PIC16F877A_line_follower_robot.c: 83:     }
+}
+[e :U 105 ]
+"84
+[; ;PIC16F877A_line_follower_robot.c: 84: }
 [e :UE 96 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"76
-[; ;PIC16F877A_line_follower_robot.c: 76: void main(void)
+"86
+[; ;PIC16F877A_line_follower_robot.c: 86: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"77
-[; ;PIC16F877A_line_follower_robot.c: 77: {
+"87
+[; ;PIC16F877A_line_follower_robot.c: 87: {
 {
 [e :U _main ]
 [f ]
-"81
-[; ;PIC16F877A_line_follower_robot.c: 81:     UARTTransInit();
-[e ( _UARTTransInit ..  ]
-"83
-[; ;PIC16F877A_line_follower_robot.c: 83:     TMR0 = 6;
-[e = _TMR0 -> -> 6 `i `uc ]
-"84
-[; ;PIC16F877A_line_follower_robot.c: 84:     timer0TimerInit(TIMER0_DIV_16);
-[e ( _timer0TimerInit (1 -> . `E949 4 `ui ]
-"86
-[; ;PIC16F877A_line_follower_robot.c: 86:     hcsr04Init();
-[e ( _hcsr04Init ..  ]
-"88
-[; ;PIC16F877A_line_follower_robot.c: 88:     UARTsendString("Hello Gia\r\n");
-[e ( _UARTsendString (1 :s 1C ]
+"89
+[; ;PIC16F877A_line_follower_robot.c: 89:     TRISD1 = 0;
+[e = _TRISD1 -> -> 0 `i `b ]
 "90
-[; ;PIC16F877A_line_follower_robot.c: 90:     while(1)
-[e :U 107 ]
-"91
-[; ;PIC16F877A_line_follower_robot.c: 91:     {
-{
+[; ;PIC16F877A_line_follower_robot.c: 90:     RD1 = 0;
+[e = _RD1 -> -> 0 `i `b ]
 "92
-[; ;PIC16F877A_line_follower_robot.c: 92:         UARTsendChar(distance_command);
-[e ( _UARTsendChar (1 _distance_command ]
-"93
-[; ;PIC16F877A_line_follower_robot.c: 93:         _delay((unsigned long)((100)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;PIC16F877A_line_follower_robot.c: 92:     I2C_Slave_Init(0x10);
+[e ( _I2C_Slave_Init (1 -> -> 16 `i `uc ]
 "94
-[; ;PIC16F877A_line_follower_robot.c: 94:     }
-}
-[e :U 106 ]
-[e $U 107  ]
-[e :U 108 ]
+[; ;PIC16F877A_line_follower_robot.c: 94:     TMR0 = 6;
+[e = _TMR0 -> -> 6 `i `uc ]
 "95
-[; ;PIC16F877A_line_follower_robot.c: 95:     return;
-[e $UE 105  ]
-"96
-[; ;PIC16F877A_line_follower_robot.c: 96: }
-[e :UE 105 ]
+[; ;PIC16F877A_line_follower_robot.c: 95:     timer0TimerInit(TIMER0_DIV_16);
+[e ( _timer0TimerInit (1 -> . `E949 4 `ui ]
+"97
+[; ;PIC16F877A_line_follower_robot.c: 97:     hcsr04Init();
+[e ( _hcsr04Init ..  ]
+"99
+[; ;PIC16F877A_line_follower_robot.c: 99:     while(1)
+[e :U 113 ]
+"100
+[; ;PIC16F877A_line_follower_robot.c: 100:     {
+{
+"103
+[; ;PIC16F877A_line_follower_robot.c: 103:     }
 }
-[a 1C 72 101 108 108 111 32 71 105 97 13 10 0 ]
+[e :U 112 ]
+[e $U 113  ]
+[e :U 114 ]
+"104
+[; ;PIC16F877A_line_follower_robot.c: 104:     return;
+[e $UE 111  ]
+"105
+[; ;PIC16F877A_line_follower_robot.c: 105: }
+[e :UE 111 ]
+}
